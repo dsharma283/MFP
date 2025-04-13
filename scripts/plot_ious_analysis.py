@@ -20,7 +20,7 @@ def parse_args():
     parser = argparse.ArgumentParser()
 
     group_pkl_path = parser.add_mutually_exclusive_group(required=False)
-    group_pkl_path.add_argument('--folder', type=str, default='',
+    group_pkl_path.add_argument('--folder', type=str, default=None,
                                 help='Path to folder with .pickle files.')
     group_pkl_path.add_argument('--files', nargs='+', default=None,
                                 help='List of paths to .pickle files separated by space.')
@@ -179,16 +179,22 @@ def get_target_file_path(plots_path, dataset_name):
 
 
 def get_files_list(args, cfg):
+    #print(f'getfiles args.model_dirs = {args.model_dirs}')
     if args.folder is not None:
+        print('Processing folder')
         files_list = Path(args.folder).glob('*.pickle')
     elif args.files is not None:
+        print('processing files')
         files_list = [Path(file) for file in args.files]
     elif args.model_dirs is not None:
+        print("Processing model_dirs")
         files_list = []
         for folder in args.model_dirs:
             folder = Path(folder) / 'plots'
+            print(folder)
             files_list.extend(folder.glob('*.pickle'))
     elif args.exp_models is not None:
+        print('processing exp_models')
         files_list = []
         for rel_exp_path in args.exp_models:
             rel_exp_path, checkpoint_prefix = rel_exp_path.split(':')

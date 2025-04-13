@@ -1,15 +1,15 @@
 INTERACTIVE_MODELS_PATH: "./weights"
-EXPS_PATH: "/media/cwlee/HDD1/Projects/MFP_results"
+EXPS_PATH: "/home/users/deveshs/cv/MFP/results"
 
 # Evaluation datasets
-GRABCUT_PATH: "/media/cwlee/HDD1/datasets/InteractiveSegmentation/GrabCut"
-BERKELEY_PATH: "/media/cwlee/HDD1/datasets/InteractiveSegmentation/Berkeley"
-DAVIS_PATH: "/media/cwlee/HDD1/datasets/InteractiveSegmentation/DAVIS"
-DAVIS_SUBSET_PATH: "/media/cwlee/HDD1/datasets/InteractiveSegmentation/DAVIS_subset"
-COCO_MVAL_PATH: "/media/cwlee/HDD1/datasets/InteractiveSegmentation/COCO_MVal"
+GRABCUT_PATH: "/home/users/deveshs/cv/datasets/GrabCut"
+BERKELEY_PATH: "/home/users/deveshs/cv/datasets/Berkeley"
+DAVIS_PATH: "/home/users/deveshs/cv/datasets/DAVIS"
+#DAVIS_SUBSET_PATH: "/media/cwlee/HDD1/datasets/InteractiveSegmentation/DAVIS_subset"
+#COCO_MVAL_PATH: "/media/cwlee/HDD1/datasets/InteractiveSegmentation/COCO_MVal"
 
 # Train datasets
-SBD_PATH: "/media/cwlee/HDD1/datasets/InteractiveSegmentation/SBD"
+SBD_PATH: "/home/users/deveshs/cv/datasets/SBD"
 COCO_PATH: "/media/cwlee/HDD1/datasets/InteractiveSegmentation/COCO_LVIS"
 LVIS_v1_PATH: "/media/cwlee/HDD1/datasets/InteractiveSegmentation/COCO_LVIS"
 PASCALVOC_PATH: "/media/cwlee/HDD1/datasets/InteractiveSegmentation/PascalVOC"
